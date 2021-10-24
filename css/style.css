@@ -1,0 +1,380 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h1,
+h3,
+h4,
+h5 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 12px;
+  color: white;
+  background-color: black;
+  font-weight: 400;
+  font-family: Roboto;
+}
+body.lock {
+  overflow: hidden;
+}
+.wrapper {
+  min-width: 100%;
+  overflow: hidden;
+}
+._container {
+  max-width: 1395px;
+  padding: 0px 15px;
+  margin: 0px auto;
+  box-sizing: content-box;
+}
+/*----------ШАПКА-----------------------------------------------------*/
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: black;
+}
+.header__container {
+  display: flex;
+  min-height: 80px;
+  align-items: center;
+}
+@media (max-width: 479px) {
+  .header__container {
+    min-height: 5px;
+  }
+}
+.header__logo {
+  padding-left: 35px;
+  font-family: Pinyon Script;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 100px;
+  color: inherit;
+}
+@media (max-width: 479px) {
+  .header__logo {
+    font-size: 60px;
+  }
+}
+.header__menu {
+  margin-left: auto;
+}
+
+.menu {
+  padding: 5px 0;
+  padding-right: 23px;
+}
+.menu__list {
+  flex-wrap: wrap;
+  display: flex;
+}
+.menu__item {
+  margin: 0px 0px 0px 25px;
+}
+
+.menu__link {
+  color: white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 115%;
+}
+@media (max-width: 479px) {
+  .menu__link {
+    font-size: 14px;
+  }
+}
+
+/*----------PAGE-----------------------------------------------------*/
+.page {
+  flex: 1 1 auto;
+}
+.page__main-blok {
+}
+/*----------ПОДВАЛ-----------------------------------------------------*/
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+}
+
+.footer__container {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+}
+.footer__row {
+  flex-wrap: wrap;
+  display: flex;
+  margin-left: auto;
+}
+.footer__column {
+}
+.item-footer {
+  margin: 0px 0px 0px 25px;
+}
+.item-footer__text {
+  margin: 0px 0px 5px 0px;
+}
+.item-footer__link {
+}
+.text {
+  color: white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 85%;
+}
+
+/*--------------------------------------------------------------------*/
+
+.main-blok {
+}
+.main-blok__container {
+  min-height: 445px;
+}
+.main-blok__body {
+  display: flex;
+  padding: 100px 0px 0px 25px;
+  margin: 0px -23px -23px 0px;
+  flex-wrap: wrap;
+}
+@media (max-wiath: 1150px) {
+  .main-blok__body {
+    flex: 0 1 33.333%;
+  }
+}
+@media (max-wiath: 992px) {
+  .main-blok__body {
+    flex: 0 1 50%;
+  }
+}
+.main-blok__column {
+  margin: 0px 23px 23px 0px;
+}
+
+.main-blok__item {
+}
+
+.item-blok {
+  width: 352px;
+  height: 445px;
+}
+.item-blok__icon {
+}
+
+/*-------------POPUP_AUTHORIZATION-------------------------------------------*/
+._popup-container {
+  max-width: 275px;
+  padding: 0px 15px;
+  margin: 0px auto;
+  box-sizing: content-box;
+}
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+.popup.open .popup__content {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.popup__content {
+  background: linear-gradient(
+      0deg,
+      rgba(24, 24, 29, 0.11),
+      rgba(24, 24, 29, 0.11)
+    ),
+    rgba(148, 174, 242, 0.72);
+  backdrop-filter: blur(25px);
+  border-radius: 13px;
+  width: 445px;
+  height: 600px;
+  padding-top: 59px;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  transform: translate(0px, -100%);
+}
+
+.content__container {
+  width: 225px;
+  margin: 0 auto;
+  text-align: center;
+}
+.content__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 32px;
+  color: black;
+}
+
+.popup__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: black;
+}
+
+.content__button {
+  min-height: 40px;
+  max-width: 275px;
+  margin-top: 35px;
+}
+
+.button__container {
+  box-sizing: content-box;
+  display: flex;
+}
+.button-content {
+}
+.button-content_container {
+  align-items: center;
+  height: 40px;
+  width: 130px;
+  margin: 0px;
+  display: flex;
+  background: #3f5c94;
+  border-radius: 5px;
+}
+.button-content_container:not(:last-child) {
+  margin: 0px 14px 0px 0px;
+}
+
+.button-content__icon {
+  align-items: center;
+  border-radius: 5px;
+}
+.icon {
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+}
+.button-content__text {
+  padding: 0px 10px 0px 0px;
+}
+.content__input-form {
+  margin-top: 33px;
+}
+
+.input-form {
+  text-align: center;
+}
+.input-form__text {
+  margin: 15px 0px 3px 0px;
+  color: black;
+  text-align: left;
+}
+.input-form input {
+  padding: 10px;
+  height: 50px;
+  width: 100%;
+  color: black;
+  font-size: 20px;
+  background-color: rgba(227, 234, 254, 0.7);
+  border-radius: 5px;
+  outline: none;
+  border: 1.5px solid #fff;
+  box-sizing: border-box;
+}
+
+.input-form input[type="text"]:focus,
+.input-form input[type="password"]:focus {
+  border: 1px solid #0fc3f5;
+}
+
+.input-form input[type="submit"] {
+  margin-top: -7px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  background: black;
+  transition: 0.3s;
+}
+
+.input-form input[type="submit"]:hover {
+  background: #f2f2f7ef;
+  color: black;
+}
+.content__link {
+  margin-top: 40px;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+  line-height: 14px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.692);
+}
+
+.link:hover {
+  color: white;
+}
+/*-------------POPUP_REGISTRATION-------------------------------------------*/
+.popup_registration {
+  height: 770px;
+}
+.checkbox_container {
+  display: flex;
+  margin-top: 16px;
+}
+
+.checkbox {
+  padding-left: 5px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: black;
+}

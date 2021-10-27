@@ -181,68 +181,74 @@
     </div>
 
     <div id="popup" class="popup">
-      <div class="popup__body">
-        <div class="popup__content">
-          <div class="content__container">
-            <div class="content__title">Sign In With</div>
-            <div class="content__button content__container">
-              <div class="button__container button-content">
-                <div class="button-content_container">
-                  <div class="button-content__icon">
-                    <img class="icon" src="images/tg.png" alt="Error" />
-                  </div>
-                  <div class="button-content__text">Telegram</div>
-                </div>
-                <div class="button-content_container content__container">
-                  <div class="button-content__icon">
-                    <img class="icon" src="images/insta.png" alt="Error" />
-                  </div>
-                  <div class="button-content__text">Instagram</div>
-                </div>
-              </div>
-              <div class="content__input-form">
-                <div class="input-form content__container">
-                  <div for="username" class="input-form__text">Username</div>
-                  <input
-                    id="username"
-                    type="text"
-                    name="username"
-                    placeholder=" "
-                  />
-                </div>
-                <div class="input-form content__container">
-                  <div for="password" class="input-form__text">Password</div>
-                  <input
-                    id="password"
-                    type="password"
-                    name="password"
-                    placeholder=" "
-                  />
-                </div>
-              </div>
+      <form id="form1">
+        <div class="popup__body">
+          <div class="popup__content">
+            <div class="content__container">
+              <div class="content__title">Sign In With</div>
               <div class="content__button content__container">
-                <div class="input-form button">
-                  <font style="vertical-align: inherit">
-                    <font style="vertical-align: inherit">
-                      <input type="submit" value="Sign in"
-                    </font>
-                  </font>
+                <div class="button__container button-content">
+                  <div class="button-content_container">
+                    <div class="button-content__icon">
+                      <img class="icon" src="images/tg.png" alt="Error" />
+                    </div>
+                    <div class="button-content__text">Telegram</div>
+                  </div>
+                  <div class="button-content_container content__container">
+                    <div class="button-content__icon">
+                      <img class="icon" src="images/insta.png" alt="Error" />
+                    </div>
+                    <div class="button-content__text">Instagram</div>
+                  </div>
                 </div>
-              </div>
-
-              <div class="content__link content__container">
-                <a href="#popup_2" class="link popup-link">
-                  <font style="vertical-align: inherit">
+                <div class="content__input-form">
+                  <div class="input-form content__container">
+                    <div class="input-form__text _req">Username</div>
+                    <input
+                      id="username"
+                      name="username"
+                      class="form__input _req _username"
+                      type="text"
+                      placeholder=" "
+                    />
+                    <div class="errors"></div>
+                  </div>
+                  <div class="input-form content__container">
+                    <div class="input-form__text">Password</div>
+                    <input
+                      id="password"
+                      name="password"
+                      class="form__input _req _password"
+                      type="password"
+                      placeholder=" "
+                    />
+                    <div class="errors"></div>
+                  </div>
+                </div>
+                <div class="content__button content__container">
+                  <div class="input-form button">
                     <font style="vertical-align: inherit">
-                      Creat an account
+                      <font style="vertical-align: inherit">
+                        <input type="submit" value="Sign in"
+                      </font>
                     </font>
-                  </font>
-                </a>
+                  </div>
+                </div>
+
+                <div class="content__link content__container">
+                  <a href="#popup_2" class="link popup-link">
+                    <font style="vertical-align: inherit">
+                      <font style="vertical-align: inherit">
+                        Creat an account
+                      </font>
+                    </font>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
 
     <div id="popup_2" class="popup">
@@ -268,7 +274,7 @@
                 </div>
                 <div class="content__input-form">
                   <div class="input-form content__container">
-                    <div class="input-form__text">Username</div>
+                    <div class="input-form__text _req">Username</div>
                     <input
                       id="username"
                       name="username"
@@ -279,7 +285,7 @@
                     <div class="errors"></div>
                   </div>
                   <div class="input-form content__container">
-                    <div class="input-form__text">E-mail</div>
+                    <div class="input-form__text _req">E-mail</div>
                     <input
                       id="email"
                       name="email"

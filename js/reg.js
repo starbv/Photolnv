@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
         }
-        return error;
+
     }
 
 });

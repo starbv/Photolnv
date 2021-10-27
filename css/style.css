@@ -115,6 +115,7 @@ body.lock {
 }
 .page__main-blok {
 }
+
 /*----------ПОДВАЛ-----------------------------------------------------*/
 .footer {
   left: 0;
@@ -156,7 +157,6 @@ body.lock {
 .main-blok {
 }
 .main-blok__container {
-  min-height: 445px;
 }
 .main-blok__body {
   display: flex;
@@ -189,12 +189,6 @@ body.lock {
 }
 
 /*-------------POPUP_AUTHORIZATION-------------------------------------------*/
-._popup-container {
-  max-width: 275px;
-  padding: 0px 15px;
-  margin: 0px auto;
-  box-sizing: content-box;
-}
 .popup {
   position: fixed;
   width: 100%;
@@ -207,6 +201,13 @@ body.lock {
   overflow-y: auto;
   overflow-x: hidden;
   transition: all 0.8s ease 0s;
+}
+
+._popup-container {
+  max-width: 275px;
+  padding: 0px 15px;
+  margin: 0px auto;
+  box-sizing: content-box;
 }
 
 .popup.open {
@@ -309,9 +310,11 @@ body.lock {
 }
 .input-form__text {
   margin: 15px 0px 3px 0px;
+  line-height: 14px;
   color: black;
   text-align: left;
 }
+
 .input-form input {
   padding: 10px;
   height: 50px;
@@ -365,7 +368,7 @@ body.lock {
 .popup_registration {
   height: 770px;
 }
-.checkbox_container {
+.checkbox__container {
   display: flex;
   margin-top: 16px;
 }
@@ -377,4 +380,11 @@ body.lock {
   font-size: 12px;
   line-height: 14px;
   color: black;
+}
+
+.errors {
+  text-align: end;
+  height: 11px;
+  color: #7e0707;
+  margin: 4px 0px -15px 0px;
 }

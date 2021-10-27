@@ -179,6 +179,7 @@
         </div>
       </footer>
     </div>
+
     <div id="popup" class="popup">
       <div class="popup__body">
         <div class="popup__content">
@@ -194,26 +195,36 @@
                 </div>
                 <div class="button-content_container content__container">
                   <div class="button-content__icon">
-                    <img class="icon" src="images/vk.png" alt="Error" />
+                    <img class="icon" src="images/insta.png" alt="Error" />
                   </div>
-                  <div class="button-content__text">Vkontakte</div>
+                  <div class="button-content__text">Instagram</div>
                 </div>
               </div>
               <div class="content__input-form">
                 <div class="input-form content__container">
-                  <div class="input-form__text">Username</div>
-                  <input type="text" placeholder=" " />
+                  <div for="username" class="input-form__text">Username</div>
+                  <input
+                    id="username"
+                    type="text"
+                    name="username"
+                    placeholder=" "
+                  />
                 </div>
                 <div class="input-form content__container">
-                  <div class="input-form__text">Password</div>
-                  <input type="password" placeholder=" " />
+                  <div for="password" class="input-form__text">Password</div>
+                  <input
+                    id="password"
+                    type="password"
+                    name="password"
+                    placeholder=" "
+                  />
                 </div>
               </div>
               <div class="content__button content__container">
                 <div class="input-form button">
                   <font style="vertical-align: inherit">
                     <font style="vertical-align: inherit">
-                      <input type="submit" value="Log in"
+                      <input type="submit" value="Sign in"
                     </font>
                   </font>
                 </div>
@@ -235,74 +246,118 @@
     </div>
 
     <div id="popup_2" class="popup">
-      <div class="popup__body">
-        <div class="popup__content popup_registration">
-          <div class="content__container">
-            <div class="content__title">User registration</div>
-            <div class="content__button content__container">
-              <div class="button__container button-content">
-                <div class="button-content_container">
-                  <div class="button-content__icon">
-                    <img class="icon" src="images/tg.png" alt="Error" />
-                  </div>
-                  <div class="button-content__text">Telegram</div>
-                </div>
-                <div class="button-content_container content__container">
-                  <div class="button-content__icon">
-                    <img class="icon" src="images/vk.png" alt="Error" />
-                  </div>
-                  <div class="button-content__text">Vkontakte</div>
-                </div>
-              </div>
-              <div class="content__input-form">
-                <div class="input-form content__container">
-                  <div class="input-form__text">Username</div>
-                  <input type="text" placeholder=" " />
-                </div>
-                <div class="input-form content__container">
-                  <div class="input-form__text">E-mail</div>
-                  <input type="text" placeholder=" " />
-                </div>
-                <div class="input-form content__container">
-                  <div class="input-form__text">Telephone</div>
-                  <input type="text" placeholder=" " />
-                </div>
-                <div class="input-form content__container">
-                  <div class="input-form__text">Password</div>
-                  <input type="password" placeholder=" " />
-                </div>
-                <div class="input-form content__container">
-                  <div class="input-form__text">Repeat password</div>
-                  <input type="password" placeholder=" " />
-                </div>
-              </div>
-              <div class="checkbox_container">
-                <input type="checkbox" name="agree" value="1" />
-                <p class="checkbox">I agree to accept</p>
-              </div>
-
+      <form id="form2">
+        <div class="popup__body">
+          <div class="popup__content popup_registration">
+            <div class="content__container">
+              <div class="content__title">User registration</div>
               <div class="content__button content__container">
-                <div class="input-form button">
-                  <font style="vertical-align: inherit">
-                    <font style="vertical-align: inherit">
-                      <input type="submit" value="Register"
-                    </font>
-                  </font>
+                <div class="button__container button-content">
+                  <div class="button-content_container">
+                    <div class="button-content__icon">
+                      <img class="icon" src="images/tg.png" alt="Error" />
+                    </div>
+                    <div class="button-content__text">Telegram</div>
+                  </div>
+                  <div class="button-content_container content__container">
+                    <div class="button-content__icon">
+                      <img class="icon" src="images/insta.png" alt="Error" />
+                    </div>
+                    <div class="button-content__text">Instagram</div>
+                  </div>
                 </div>
-              </div>
+                <div class="content__input-form">
+                  <div class="input-form content__container">
+                    <div class="input-form__text">Username</div>
+                    <input
+                      id="username"
+                      name="username"
+                      class="form__input _req _username"
+                      type="text"
+                      placeholder=" "
+                    />
+                    <div class="errors"></div>
+                  </div>
+                  <div class="input-form content__container">
+                    <div class="input-form__text">E-mail</div>
+                    <input
+                      id="email"
+                      name="email"
+                      class="form__input _req _email"
+                      type="text"
+                      placeholder=" "
+                    />
+                    <div class="errors"></div>
+                  </div>
+                  <div class="input-form content__container">
+                    <div class="input-form__text">Telephone</div>
+                    <input
+                      id="phone"
+                      name="phone"
+                      class="form__input _req _phone"
+                      type="text"
+                      placeholder=" "
+                    />
+                    <div class="errors"></div>
+                  </div>
+                  <div class="input-form content__container">
+                    <div class="input-form__text">Password</div>
+                    <input
+                      id="password"
+                      name="password"
+                      class="form__input _req _password"
+                      type="password"
+                      placeholder=" "
+                    />
+                    <div class="errors"></div>
+                  </div>
+                  <div class="input-form content__container">
+                    <div class="input-form__text">Repeat password</div>
+                    <input
+                      id="rapeatPassword"
+                      name="reqPassword"
+                      class="form__input _req _repPas"
+                      type="password"
+                      placeholder=" "
+                    />
+                    <div class="errors"></div>
+                  </div>
+                </div>
+                <div class="checkbox__container">
+                  <input
+                    type="checkbox"
+                    name="checkbox"
+                    class="form-check _req"
+                    value="1"
+                  />
+                  <p id="checkbox" class="checkbox">I agree to accept</p>
+                </div>
 
-              <div class="content__link content__container">
-                <a href="#popup" class="link popup-link">
-                  <font style="vertical-align: inherit">
-                    <font style="vertical-align: inherit"> Log in </font>
-                  </font>
-                </a>
+                <div class="content__button content__container">
+                  <div class="input-form button">
+                    <font style="vertical-align: inherit">
+                      <font style="vertical-align: inherit">
+                        <input type="submit" value="Register"
+                      </font>
+                    </font>
+                  </div>
+                </div>
+
+                <div class="content__link content__container">
+                  <a href="#popup" class="link popup-link">
+                    <font style="vertical-align: inherit">
+                      <font style="vertical-align: inherit"> Sign in </font>
+                    </font>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/popups.js"></script>
+    <script src="js/reg.js"></script>
+    <script src="js/sign.js"></script>
   </body>
 </html>

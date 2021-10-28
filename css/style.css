@@ -32,7 +32,7 @@ body {
   font-size: 12px;
   color: white;
   background-color: black;
-  font-weight: 400;
+  font-weight: normal;
   font-family: Roboto;
 }
 body.lock {
@@ -44,7 +44,7 @@ body.lock {
 }
 ._container {
   max-width: 1395px;
-  padding: 0px 15px;
+  padding: 0px 20px;
   margin: 0px auto;
   box-sizing: content-box;
 }
@@ -152,42 +152,78 @@ body.lock {
   line-height: 85%;
 }
 
-/*--------------------------------------------------------------------*/
+/*-------------PAGE__MAIN------------------------------------------------------*/
 
-.main-blok {
+.main-block {
 }
-.main-blok__container {
+.main-block__container {
+  align-items: center;
 }
-.main-blok__body {
+
+.main-block__body {
   display: flex;
-  padding: 100px 0px 0px 25px;
-  margin: 0px -23px -23px 0px;
   flex-wrap: wrap;
+  margin: 100px 0px 0px -10px;
 }
-@media (max-wiath: 1150px) {
-  .main-blok__body {
-    flex: 0 1 33.333%;
-  }
+.main-block__column {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0px 10px 20px 10px;
+  align-items: center;
 }
-@media (max-wiath: 992px) {
-  .main-blok__body {
-    flex: 0 1 50%;
-  }
-}
-.main-blok__column {
-  margin: 0px 23px 23px 0px;
-}
+.main-block__item {
+  width: 251px;
+  height: 280px;
+  background: radial-gradient(
+    98.87% 98.87% at 0% 0%,
+    rgba(0, 0, 0, 0.25) 81.66%,
+    rgba(255, 255, 255, 0.135) 100%
+  );
+  border: 1px solid #383838;
+  box-sizing: border-box;
+  border-radius: 3px;
 
-.main-blok__item {
+  border: 1px solid #383838;
+  box-sizing: border-box;
+  border-radius: 3px;
 }
-
-.item-blok {
-  width: 352px;
-  height: 445px;
+.item-main {
 }
-.item-blok__icon {
+.item-main__icon {
+  margin: 0 auto;
+  margin-top: 8px;
+  width: 235px;
+  height: 222px;
+  border: 0.3px solid #383838;
+  box-sizing: border-box;
 }
-
+.item-main__block-inscription {
+  display: flex;
+  margin: 5px 8px 0px 15px;
+  font-size: 11px;
+}
+.block-inscription {
+}
+.block-inscription__name {
+}
+.block-inscription__date {
+  margin-left: auto;
+}
+.item-main__block-user {
+  display: flex;
+  margin: 5px 8px 0px 15px;
+}
+.block-user {
+}
+.block-user__icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+.block-user__nickname {
+  margin: 3px 0px 0px 5px;
+}
 /*-------------POPUP_AUTHORIZATION-------------------------------------------*/
 .popup {
   position: fixed;

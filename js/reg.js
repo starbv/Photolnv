@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('form2');
     form.addEventListener('submit', formSend);
-    let formReq = document.querySelectorAll('._req');
+    let formReq = document.querySelectorAll('._reqReg');
     const pass = form.querySelector("._password");
     const reqPass = form.querySelector("._repPas");
     const check = form.querySelector(".form-check");
@@ -16,7 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const submit = () => {
         alert("The data has been sent");
-
+        for (let index = 0; index < formReq.length; index++) {
+            const input = formReq[index];
+            console.log(input.value);
+        }
     };
     const maskPhone = () => {
         const inputsPhone = document.querySelectorAll('input[name="phone"]');
@@ -29,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (pos < 3) {
                     event.preventDefault();
                 }
-                let matrix = "+7 (___) ___ ____",
+                let matrix = "+7 (___) ___ __ __",
                     i = 0,
                     def = matrix.replace(/\D/g, ""),
                     val = input.value.replace(/\D/g, ""),
@@ -71,10 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
             input.addEventListener("focus", mask, false);
             input.addEventListener("blur", mask, false);
             input.addEventListener("keydown", mask, false);
-
-
         });
-
     };
     maskPhone();
 

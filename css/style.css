@@ -135,6 +135,7 @@ body.lock {
   margin-left: auto;
 }
 .footer__column {
+  padding-right: 17px;
 }
 .item-footer {
   margin: 0px 0px 0px 25px;

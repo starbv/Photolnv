@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('form1');
     form.addEventListener('submit', formSend);
-    let formReq = document.querySelectorAll('._req');
+    let formReq = document.querySelectorAll('._reqSign');
     let error = false;
 
     const regExpName = /^[a-z0-9_-]{3,16}$/;
@@ -12,13 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const submit = () => {
         alert("The data has been sent");
-        if (!regExpPass.test(input.value) && input.value !== "") {
-            input.nextElementSibling.textContent =
-                "Please enter correct password";
-            error = false;
-        } else {
-            input.nextElementSibling.textContent = "";
-            error = true;
+        for (let index = 0; index < formReq.length; index++) {
+            const input = formReq[index];
+            console.log(input.value);
         }
     };
 

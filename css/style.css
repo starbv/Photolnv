@@ -50,24 +50,26 @@ body.lock {
 }
 /*----------ШАПКА-----------------------------------------------------*/
 .header {
-  position: fixed;
   width: 100%;
   left: 0;
   top: 0;
   background-color: black;
 }
+
 .header__container {
   display: flex;
-  min-height: 80px;
+  min-height: 60px;
   align-items: center;
 }
-@media (max-width: 479px) {
+
+@media (max-width: 360px) {
   .header__container {
-    min-height: 5px;
+    min-height: 40px;
   }
 }
+
 .header__logo {
-  padding-left: 35px;
+  padding: 9px 0px 0px 35px;
   font-family: Pinyon Script;
   font-style: normal;
   font-weight: normal;
@@ -75,15 +77,34 @@ body.lock {
   line-height: 100px;
   color: inherit;
 }
-@media (max-width: 479px) {
+
+@media (max-width: 768px) {
   .header__logo {
+    padding-top: 5px;
     font-size: 60px;
+    line-height: 80px;
   }
 }
+
+@media (max-width: 480px) {
+  .header__logo {
+    padding-top: 3px;
+    font-size: 40px;
+    line-height: 65px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header__logo {
+    padding-top: 0px;
+    font-size: 20px;
+    line-height: 50px;
+  }
+}
+
 .header__menu {
   margin-left: auto;
 }
-
 .menu {
   padding: 5px 0;
   padding-right: 23px;
@@ -103,9 +124,20 @@ body.lock {
   font-size: 19px;
   line-height: 115%;
 }
-@media (max-width: 479px) {
+
+@media (max-width: 768px) {
   .menu__link {
     font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .menu__link {
+    font-size: 10px;
+  }
+}
+@media (max-width: 360px) {
+  .menu__link {
+    font-size: 6px;
   }
 }
 
@@ -164,7 +196,7 @@ body.lock {
 .main-block__body {
   display: flex;
   flex-wrap: wrap;
-  margin: 100px 0px 0px -10px;
+  margin: -10px 0px 0px -10px;
 }
 .main-block__column {
   display: flex;

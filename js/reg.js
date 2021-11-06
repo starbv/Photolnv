@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const reqPass = form.querySelector("._repPas");
     const check = form.querySelector(".form-check");
     let error = false;
+    let errordata = false;
 
     const regExpName = /^[a-z0-9_-]{3,16}$/;
     const regExpEmail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
@@ -84,51 +85,51 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (!regExpName.test(input.value) && input.value !== "") {
                     input.nextElementSibling.textContent =
                         "Please enter a valid username";
-                    error = false;
+                    errordata = false;
                 } else {
                     input.nextElementSibling.textContent = "";
-                    error = true;
+                    errordata = true;
                 }
                 break;
             case ("email"):
                 if (!regExpEmail.test(input.value) && input.value !== "") {
                     input.nextElementSibling.textContent =
                         "Please enter a valid email";
-                    error = false;
+                    errordata = false;
                 } else {
                     input.nextElementSibling.textContent = "";
-                    error = true;
+                    errordata = true;
                 }
                 break;
             case ("password"):
                 if (reqPass.value !== pass.value && reqPass.value !== "") {
                     pass.nextElementSibling.textContent = "Password mismatch";
                     reqPass.nextElementSibling.textContent = "Password mismatch";
-                    error = false;
+                    errordata = false;
                 } else {
                     pass.nextElementSibling.textContent = "";
                     reqPass.nextElementSibling.textContent = "";
-                    error = true;
+                    errordata = true;
                 }
 
                 if (!regExpPass.test(input.value) && input.value !== "") {
                     input.nextElementSibling.textContent =
                         "Please enter correct password";
-                    error = false;
+                    errordata = false;
                 } else {
                     input.nextElementSibling.textContent = "";
-                    error = true;
+                    errordata = true;
                 }
                 break;
             case ("reqPassword"):
                 if (reqPass.value !== pass.value && reqPass.value !== "") {
                     pass.nextElementSibling.textContent = "Password mismatch";
                     reqPass.nextElementSibling.textContent = "Password mismatch";
-                    error = false;
+                    errordata = false;
                 } else {
                     pass.nextElementSibling.textContent = "";
                     reqPass.nextElementSibling.textContent = "";
-                    error = true;
+                    errordata = true;
                 }
                 break;
         }
@@ -139,11 +140,13 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         formValidate(form);
         if (error) {
-            if (check.checked) {
+
+            if (errordata) {
                 submit();
                 form.reset();
-            } else {
-                alert("Please confirm your agreement with the terms");
+            }
+            else {
+                alert('Fill in the fields');
             }
         }
         else {

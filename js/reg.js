@@ -142,8 +142,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if (error) {
 
             if (errordata) {
-                submit();
-                form.reset();
+                if (check.checked) {
+                    submit();
+                    form.reset();
+                }
+                else {
+                    alert("Please confirm your consent to data processing.");
+                }
             }
             else {
                 alert('Fill in the fields');

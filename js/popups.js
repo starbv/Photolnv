@@ -20,7 +20,7 @@ if (popupLinks.length > 0) {
 
 const popupCloseIcon = document.querySelectorAll('.close-popup');
 if (popupCloseIcon.length > 0) {
-  for (let index = 0; index < popupCloseIco.length; index++) {
+  for (let index = 0; index < popupCloseIcon.length; index++) {
     const el = popupCloseIcon[index];
     el.addEventListener("click", function (e) {
       popupClose(el.closest(".popup"));

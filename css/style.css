@@ -107,7 +107,7 @@ body.lock {
 }
 .menu {
   padding: 5px 0;
-  padding-right: 23px;
+  padding-right: 35px;
 }
 @media (max-width: 360px) {
   .menu {
@@ -221,8 +221,8 @@ body.lock {
   align-items: center;
 }
 .main-block__item {
-  width: 251px;
-  height: 280px;
+  padding: 8px;
+  padding-top: 0px;
   background: radial-gradient(
     98.87% 98.87% at 0% 0%,
     rgba(0, 0, 0, 0.25) 81.66%,
@@ -241,8 +241,7 @@ body.lock {
 .item-main__icon {
   margin: 0 auto;
   margin-top: 8px;
-  width: 235px;
-  height: 222px;
+
   border: 0.3px solid #383838;
   box-sizing: border-box;
 }
@@ -305,6 +304,15 @@ body.lock {
   align-items: center;
   justify-content: center;
   padding: 30px 10px;
+}
+
+.content__close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 17px;
+  color: black;
+  text-decoration: none;
 }
 .popup.open .popup__content {
   transform: translate(0px, 0px);

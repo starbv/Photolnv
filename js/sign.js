@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const validateInput = (input) => {
         switch (input.name) {
-            case ("username"):
-                if (!regExpName.test(input.value) && input.value !== "") {
+            case ("email"):
+                if (!regExpEmail.test(input.value) && input.value !== "") {
                     input.nextElementSibling.textContent =
-                        "Please enter a valid username";
+                        "Please enter a valid email";
                     errordata = false;
                 } else {
                     input.nextElementSibling.textContent = "";
